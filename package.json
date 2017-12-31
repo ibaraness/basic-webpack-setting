@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/ibaraness/basic-webpack-setting#readme",
   "devDependencies": {
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.19.1",
     "webpack": "^3.10.0"
   }
 }
