@@ -24,7 +24,7 @@ module.exports = {
                     test: /\.css$/,
                     loader: ["style-loader", "css-loader"]
                 },
-                /* SASS loaders */
+                /* SASS loaders (Turn sass code to css before the 'css-loader' and the 'style-loader') */
                 {
                     test: /\.scss$/,
                     loader:["style-loader","css-loader","sass-loader"]
