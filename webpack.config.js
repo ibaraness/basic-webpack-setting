@@ -14,10 +14,21 @@ module.exports = {
         },
         module: {
             rules: [
+                /* 
+                    CSS loaders 
+                    The order of loaders are from right to left:
+                     - 'css-loader' turn the css code into javascript module (string) webpack can read.
+                     - 'style-loader' creates a <style> element and add the CSS code into it.
+                */
                 {
                     test: /\.css$/,
                     loader: ["style-loader", "css-loader"]
-                }
+                },
+                /* SASS loaders */
+                {
+                    test: /\.scss$/,
+                    loader:["style-loader","css-loader","sass-loader"]
+                },
             ]
         }
 };
