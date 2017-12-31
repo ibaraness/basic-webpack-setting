@@ -1,0 +1,25 @@
+{
+  "name": "basic-webpack-setting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibaraness/basic-webpack-setting.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibaraness/basic-webpack-setting/issues"
+  },
+  "homepage": "https://github.com/ibaraness/basic-webpack-setting#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}
