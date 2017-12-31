@@ -1,4 +1,5 @@
 import {greeting} from './greeting';
+import './../styles/style.css';
 
 var greetMessage = greeting("Idan");
 
