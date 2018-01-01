@@ -21,6 +21,8 @@
   "homepage": "https://github.com/ibaraness/basic-webpack-setting#readme",
   "devDependencies": {
     "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
