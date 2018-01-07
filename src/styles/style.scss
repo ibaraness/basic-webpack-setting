@@ -28,7 +28,11 @@ html {
             font-family: 'Open Sans', sans-serif;
         }
         .webpack-logo {
+            width: 430px;
+            height: 430px;
             background: url(./../../public/webpack.png) center center no-repeat;
+            background-size: cover;
+            margin: 0 auto;
         }
     }
 }
