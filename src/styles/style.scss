@@ -9,7 +9,7 @@ html {
     body {
         max-width: 995px;
         margin: 0 auto;
-        height: 100%;
+        min-height: 100%;
         background-color: white;
         padding: 20px;
         box-sizing: border-box;
@@ -33,6 +33,21 @@ html {
             background: url(./../../public/webpack.png) center center no-repeat;
             background-size: cover;
             margin: 0 auto;
+        }
+        .lazy-loading-btn {
+            padding: 10px;
+            font-size: 14px;
+            background-color: aliceblue;
+            color: #737373;
+        }
+        .box {
+            width: 500px;
+            height: 500px;
+            margin: 10px auto;
+            line-height: 500px;
+            text-align: center;
+            border: 5px solid #bbbaba;
+            background: rgba(138, 169, 217, 0.3);
         }
     }
 }

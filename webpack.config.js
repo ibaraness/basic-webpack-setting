@@ -12,7 +12,10 @@ module.exports = {
                 /* Path.resolve returns an absolute path of a list of directories.  
                    __dirname gives us the name of the current directory  */
                 path: path.resolve(__dirname,'dist'),
-                filename: 'bundle.js'
+                /* Create scripts that will be loaded dynamically */
+                chunkFilename: '[name].bundle.js',
+                /* Use the name declared in the entry object */
+                filename: '[name].js'
         },
         module: {
             rules: [
@@ -40,9 +43,9 @@ module.exports = {
         plugins: [
             new CleanWebpackPlugin('./dist'),
             new ExtractTextWebpackPlugin("styles.css"),
-            // new HtmlWebpackPlugin({
-            //     template:'./src/index.html',
-            //     inject:'body'
-            // })
+            new HtmlWebpackPlugin({
+                template:'./src/index.html',
+                inject:'body'
+            })
         ]
 };
