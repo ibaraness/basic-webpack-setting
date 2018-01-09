@@ -1,11 +1,16 @@
 /* Using Node path module to create our 'dist' folder */
 var path = require('path');
+var webpack = require('webpack');
 var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
+        
         /* This is where we add our entry file, from which the bundle is going to be created */
-        entry: './src/app/entry.js',
+        entry: {
+            main: './src/app/entry.js',
+            vendor:['jquery']
+        },
         
         /* This is where we set the name and location of the bundle file(s) */
         output: {
@@ -46,6 +51,9 @@ module.exports = {
             new HtmlWebpackPlugin({
                 template:'./src/index.html',
                 inject:'body'
+            }),
+            new webpack.optimize.CommonsChunkPlugin({
+                name:'vendor'
             })
         ]
 };
