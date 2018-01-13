@@ -5,7 +5,14 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
         /* This is where we add our entry file, from which the bundle is going to be created */
-        entry: './src/app/entry.js',
+        entry: [
+            /**
+             * In order to use Lazy loading we must have support for Promises
+             * We use 'core-js' to create a polyfill for unsupported browsers 
+             */
+            './polyfills.js',
+            './src/app/entry.js'
+        ],
         
         /* This is where we set the name and location of the bundle file(s) */
         output: {
