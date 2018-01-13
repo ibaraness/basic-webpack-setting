@@ -8,7 +8,6 @@ module.exports = {
         
         /* This is where we add our entry file, from which the bundle is going to be created */
         entry: {
-            polyfills:'./polyfills.js',
             main: './src/app/entry.js',
             vendor:['jquery']
         },
@@ -27,6 +26,11 @@ module.exports = {
         },
         module: {
             rules: [
+                {
+                    test: /\.js$/,
+                    exclude: /node_modules/,
+                    loader: "babel-loader"
+                },
                 {
                     /* Set webpack loaders to handle SASS scss files */
                     test: /\.scss$/,

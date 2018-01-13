@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/ibaraness/basic-webpack-setting#readme",
   "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-env": "^1.6.1",
     "clean-webpack-plugin": "^0.1.17",
     "core-js": "^2.5.3",
     "css-loader": "^0.28.7",
