@@ -8,6 +8,7 @@ module.exports = {
         
         /* This is where we add our entry file, from which the bundle is going to be created */
         entry: {
+            polyfills:'./polyfills.js',
             main: './src/app/entry.js',
             vendor:['jquery']
         },
