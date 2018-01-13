@@ -14,19 +14,22 @@ module.exports = {
         },
         module: {
             rules: [
-                /* 
-                    CSS loaders 
-                    The order of loaders are from right to left:
-                     - 'css-loader' turn the css code into javascript module (string) webpack can read.
-                     - 'style-loader' creates a <style> element and add the CSS code into it.
-                */
                 {
+                    /* Set webpack loaders to handle CSS files */
                     test: /\.css$/,
+                    /**
+                     * The order in which the different loaders are set is important, 
+                     * and it goes from last to first (right to left):
+                     * - The CSS-LOADER creates a javascript module with all the styles in string like form.
+                     * - The STYLE-LOADER then, takes the results made by CSS-LOADER and creates a <style> element 
+                     * from it.
+                     */
                     loader: ["style-loader", "css-loader"]
                 },
-                /* SASS loaders (Turn sass code to css before the 'css-loader' and the 'style-loader') */
                 {
+                    /* Set webpack loaders to handle SASS scss files */
                     test: /\.scss$/,
+                    /* Same as with CSS loaders, only here the first loader (SASS-LOADER) turns SASS code to CSS first */
                     loader:["style-loader","css-loader","sass-loader"]
                 },
             ]
