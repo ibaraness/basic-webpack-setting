@@ -15,7 +15,15 @@ module.exports = {
         module: {
             rules: [
                 {
+                    /* Set webpack loaders to handle CSS files */
                     test: /\.css$/,
+                    /**
+                     * The order in which the different loaders are set is important, 
+                     * and it goes from last to first:
+                     * - The CSS-LOADER creates a javascript module with all the styles in string like form.
+                     * - The STYLE-LOADER then, takes the results made by CSS-LOADER and creates a <style> element 
+                     * from it.
+                     */
                     loader: ["style-loader", "css-loader"]
                 }
             ]
