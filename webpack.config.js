@@ -17,6 +17,7 @@ module.exports = {
         module: {
             rules: [
                 {
+                    /* Set webpack loaders to handle CSS files */
                     test: /\.scss$/,
                     use: ExtractTextWebpackPlugin.extract({
                         fallback: "style-loader",
@@ -28,8 +29,13 @@ module.exports = {
                     use: [
                         {
                             loader: "file-loader",
+                            /*
+                             * Here we set loader options 
+                             */
                             options:{
+                                /* We tell the loader to put the images in '/images'/ directory */
                                 outputPath:'./images/',
+                                /* We tell the loader to use the original image name and extension */
                                 name:'[name].[ext]'
                             }
                         }
@@ -38,7 +44,10 @@ module.exports = {
             ]
         },
         plugins: [
+            /* Clean the dist directory before each buid */
             new CleanWebpackPlugin('./dist'),
+
+            /* Extract all CSS to "styles.css" file and crete link element on header */
             new ExtractTextWebpackPlugin("styles.css")
         ]
 };
